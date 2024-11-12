@@ -4,8 +4,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -122,10 +124,11 @@ fun LabItem(lab: SubjectLabEntity, onStatusChange: (SubjectLabEntity) -> Unit) {
                 .padding(16.dp)
         ) {
             Text(
-                text = "№ ${lab.id}  ${lab.title}",
+                text = "${lab.title}",
                 fontSize = 20.sp,
                 color = Color(0xFFF1F1F1)
             )
+            Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text =  "${lab.description}",
                 fontSize = 14.sp,
